@@ -1,0 +1,90 @@
+module lab_dp(
+input clock,
+input reset,
+input [7:0]Input,
+input IRload,JMPmux,PCload,Meminst,MemWr,
+input [1:0]Asel,
+input Aload,Sub,
+output  Aeq0,Apos,
+output	reg [2:0]IR75,
+output [7:0]OUT
+);
+
+reg [4:0]IR40,PC40;
+reg [7:0]Data,A70;
+reg [7:0]RAM[31:0];
+
+
+always @(posedge clock,negedge reset)
+	if(~reset)begin
+		IR75<=0;
+		IR40<=0;
+		end
+	else begin
+		if(!IRload)begin
+			IR75<=IR75;
+			IR40<=IR40;
+			end  
+		else
+			{IR75,IR40}<=Data;
+		end
+		
+always @(posedge clock,negedge reset)
+	if(~reset)begin
+		PC40<=0;
+		end
+	else begin
+		if(!PCload)begin
+			PC40<=PC40;
+			end
+		else
+			if(JMPmux)
+				PC40<=IR40;
+			else
+				PC40<=PC40+1;
+		end
+
+always@(posedge clock)
+	if(!MemWr)
+		if(Meminst)
+			Data<=RAM[IR40];
+		else
+			Data<=RAM[PC40];
+	else
+		if(Meminst)
+			RAM[IR40]<=A70;
+		else
+			RAM[PC40]<=A70;
+		
+always @(posedge clock,negedge reset)begin
+	if(~reset)begin
+		A70<=0;
+		end
+	else 
+		if(!Aload)begin
+			A70<=A70;
+			end
+		else begin
+			case(Asel)
+			0:	A70	<=	Sub	?	A70-Data	:	A70+Data;
+			//SubAdd(Sub,A70,Data);
+			1:A70<=Input;
+			2:A70<=Data;
+			default:A70<=A70;
+			endcase
+			end
+	end		
+
+	
+	 assign Aeq0=~(|A70);
+	 assign Apos=A70>>7;
+	 assign OUT=A70;
+function [7:0]SubAdd;
+input  sub;
+input [7:0]A;
+input [7:0]M;
+	SubAdd=sub?(A-M:A+M);
+endcase
+endfunction
+
+endmodule

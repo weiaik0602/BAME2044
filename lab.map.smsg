@@ -1,0 +1,7 @@
+Info (10281): Verilog HDL Declaration information at lab_dp_pro.v(5): object "Meminst" differs only in case from object "meminst" in the same scope
+Info (10281): Verilog HDL Declaration information at lab_dp_pro.v(13): object "pc40" differs only in case from object "PC40" in the same scope
+Info (10281): Verilog HDL Declaration information at lab_dp_pro.v(14): object "a70" differs only in case from object "A70" in the same scope
+Info (10281): Verilog HDL Declaration information at lab_dp_pro.v(12): object "ir70" differs only in case from object "IR70" in the same scope
+Info (10281): Verilog HDL Declaration information at lab_dp_pro.v(12): object "q70" differs only in case from object "Q70" in the same scope
+Info (10281): Verilog HDL Declaration information at lab_dp_pro.v(12): object "da70" differs only in case from object "DA70" in the same scope
+Warning (10268): Verilog HDL information at RamReg.v(15): always construct contains both blocking and non-blocking assignments

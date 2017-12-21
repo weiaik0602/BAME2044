@@ -1,0 +1,32 @@
+module RamReg(
+	input clock,
+	input [4:0]address,
+	input WE,
+	input [7:0]D,
+	output reg[7:0]Q);
+	 
+	reg [7:0]RAM[31:0];
+	reg [4:0]wAdderss;
+	
+	
+	reg [7:0]QReg;
+	
+	
+	always@(posedge clock)begin
+	RAM[0]=8'b10000000;
+	RAM[1]=8'b01111111;
+	RAM[2]=8'b10100100;
+	RAM[3]=8'b11000001;
+	RAM[4]=8'b11111111;
+	RAM[31]=8'b00000001;
+	if(!WE)begin
+		Q<=RAM[address];
+		end
+	else begin
+		RAM[address]<=D;
+		end
+	end
+	//assign wAdderss=address;
+	//assign	RAM[wAdderss]=WE?D:RAM[wAdderss];
+	//assign	Q=WE?0:RAM[wAdderss];
+endmodule

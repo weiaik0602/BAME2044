@@ -1,0 +1,112 @@
+module lab_cu_tb();
+ reg clock;
+ reg reset,enter,Aeq0,Apos;
+ reg [2:0]IR;
+ wire IRload,JMPmux,PCload,Meminst,MemWr;
+ wire [1:0]Asel;
+ wire Aload,Sub,Halt;
+ wire  [3:0]StateNo;
+	
+	parameter S0=4'b0000,S1=4'b0001,S2=4'b0010,S3=4'b1000,S4=4'b1001,S5=4'b1010,S6=4'b1011,S7=4'b1100,S8=4'b1101,S9=4'b1110,S10=4'b1111;
+	wire [9:0]simulated;
+	reg [9:0]expected;
+	assign simulated={IRload,JMPmux,PCload,Meminst,MemWr,Asel,Aload,Sub,Halt};
+	reg [4:0]errors;
+	integer i;
+	
+	
+	
+	always begin
+	#100 Aeq0<=~Aeq0;
+		Apos<=~Apos;
+		enter<=~enter;
+	end
+	
+	initial begin
+	clock=0;
+	
+	forever #5 clock=~clock;
+	end
+	
+	initial begin
+	errors=0;
+	enter=0;
+	Aeq0=0;
+	Apos=0;
+	IR=0;
+	i=0;
+	reset_task();
+	expected=0;
+	$display("State Number | Simulated | Expected  ");
+	loop_IR();
+	# 4500 $finish;
+	end
+	
+	
+
+lab_cu CU2(clock,reset,enter,Aeq0,Apos,IR,IRload,JMPmux,PCload,Meminst,MemWr,Asel,Aload,Sub,Halt,StateNo);
+	
+	 
+////////////////////////////////////////////////	
+	task loop_IR;
+	begin
+	while(i<8)begin
+		reset_task();
+		IR=i;
+		i=i+1;
+		#500;
+		end
+	end
+	endtask
+		
+//////////////////////////////////////////////////		
+	task reset_task;
+	begin
+	reset=0;
+	#1 reset=1;
+	$display("System is now reset...");
+	end
+	endtask
+/////////////////////////////////////////////////	
+	always@(StateNo)begin
+	case(StateNo)
+		S0:expected=10'b0000000000;
+		S1:expected=10'b1010000000;
+		S2:expected=10'b0001000000;
+		S3:expected=10'b0000010100;
+		S4:expected=10'b0001100000;
+		S5:expected=10'b0000000100;
+		S6:expected=10'b0000000110;//35423
+		S7:expected=10'b0000001100;
+		S8:begin
+			if(Aeq0==0)
+			expected=10'b0100000000;
+			else
+			expected=10'b0110000000;
+			end
+		S9:begin
+			if(Apos==0)
+			expected=10'b0100000000;
+			else
+			expected=10'b0110000000;
+			end
+		S10:expected=10'b0000000001;
+		default:$display("WTF!!!");
+		endcase
+		end
+////////////////////////////////////////////////
+
+	always@(simulated,expected)begin
+		if(simulated!=expected)begin
+			errors=errors+1;
+			$display("Simulated Value = %h ,Expected Value = %h ,Errors = %d,At time %d\n",simulated,expected,errors,$time);
+			end
+		else begin
+			if(StateNo>7)
+				//$display("Well done! You are good at state %h",StateNo);
+			$monitor("%h            | %h        | %h   ",StateNo,expected,simulated);
+			 if(StateNo>7)
+				$display("Well done! You are good at state %h",StateNo);
+			end
+	end
+	endmodule
