@@ -86,6 +86,7 @@ always@(state,enter)
 		{IRload,JMPmux,PCload,Meminst,MemWr,Asel,Aload,Sub,Halt}=10'b0000000001;
 		n_state=S10;
 		end
+	default:n_state=S0;
 	endcase
 	
  assign StateNo=state;
