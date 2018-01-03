@@ -5,3 +5,8 @@ Info (10281): Verilog HDL Declaration information at lab_dp_pro.v(12): object "i
 Info (10281): Verilog HDL Declaration information at lab_dp_pro.v(12): object "q70" differs only in case from object "Q70" in the same scope
 Info (10281): Verilog HDL Declaration information at lab_dp_pro.v(12): object "da70" differs only in case from object "DA70" in the same scope
 Warning (10268): Verilog HDL information at RamReg.v(15): always construct contains both blocking and non-blocking assignments
+Warning (10273): Verilog HDL warning at lab_dp_tb.v(166): extended using "x" or "z"
+Warning (10273): Verilog HDL warning at lab_dp_tb.v(167): extended using "x" or "z"
+Warning (10273): Verilog HDL warning at lab_dp_tb.v(168): extended using "x" or "z"
+Info (10281): Verilog HDL Declaration information at lab_dp_tb.v(5): object "Meminst" differs only in case from object "meminst" in the same scope
+Info (10281): Verilog HDL Declaration information at Integrate.v(12): object "Meminst" differs only in case from object "meminst" in the same scope

@@ -20,39 +20,6 @@ VHSM_ON
 -- Start VHDL Libraries --
 -- End VHDL Libraries --
 # entity
-lab4B_p2_code
-# storage
-db|lab.(2).cnf
-db|lab.(2).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_sensitive
-# source_file
-|altera|91|quartus|nwa|lab4b_p2|lab4b_p2.v
-64f312b0d19dff394152f12a6701782
-8
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-IGNORE_VERILOG_INITIAL_CONSTRUCTS
-OFF
-VERILOG_CONSTANT_LOOP_LIMIT
-5000
-VERILOG_NON_CONSTANT_LOOP_LIMIT
-250
-}
-# macro_sequence
-
-# end
-# entity
 test_hardware
 # storage
 db|lab.(0).cnf
@@ -81,85 +48,6 @@ VERILOG_CONSTANT_LOOP_LIMIT
 5000
 VERILOG_NON_CONSTANT_LOOP_LIMIT
 250
-}
-# macro_sequence
-
-# end
-# entity
-lab_cu
-# storage
-db|lab.(1).cnf
-db|lab.(1).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_sensitive
-# source_file
-lab_cu.v
-5d8bfcd2e454a4f0e4f5f537fcc76
-8
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-IGNORE_VERILOG_INITIAL_CONSTRUCTS
-OFF
-VERILOG_CONSTANT_LOOP_LIMIT
-5000
-VERILOG_NON_CONSTANT_LOOP_LIMIT
-250
-}
-# user_parameter {
-S0
-0000
-PARAMETER_UNSIGNED_BIN
-DEF
-S1
-0001
-PARAMETER_UNSIGNED_BIN
-DEF
-S2
-0010
-PARAMETER_UNSIGNED_BIN
-DEF
-S3
-1000
-PARAMETER_UNSIGNED_BIN
-DEF
-S4
-1001
-PARAMETER_UNSIGNED_BIN
-DEF
-S5
-1010
-PARAMETER_UNSIGNED_BIN
-DEF
-S6
-1011
-PARAMETER_UNSIGNED_BIN
-DEF
-S7
-1100
-PARAMETER_UNSIGNED_BIN
-DEF
-S8
-1101
-PARAMETER_UNSIGNED_BIN
-DEF
-S9
-1110
-PARAMETER_UNSIGNED_BIN
-DEF
-S10
-1111
-PARAMETER_UNSIGNED_BIN
-DEF
 }
 # macro_sequence
 
@@ -884,150 +772,6 @@ wren_a
 
 # end
 # entity
-lab_dp_pro
-# storage
-db|lab.(3).cnf
-db|lab.(3).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_sensitive
-# source_file
-lab_dp_pro.v
-1e454b7b17d742ed445a1f06108bc7
-8
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-IGNORE_VERILOG_INITIAL_CONSTRUCTS
-OFF
-VERILOG_CONSTANT_LOOP_LIMIT
-5000
-VERILOG_NON_CONSTANT_LOOP_LIMIT
-250
-}
-# macro_sequence
-
-# end
-# entity
-ModuleReg
-# storage
-db|lab.(6).cnf
-db|lab.(6).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_sensitive
-# source_file
-modulereg.v
-68d35d3be1bc64fab49778c8ad8bd16
-8
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-IGNORE_VERILOG_INITIAL_CONSTRUCTS
-OFF
-VERILOG_CONSTANT_LOOP_LIMIT
-5000
-VERILOG_NON_CONSTANT_LOOP_LIMIT
-250
-}
-# user_parameter {
-size
-8
-PARAMETER_SIGNED_DEC
-USR
-}
-# macro_sequence
-
-# end
-# entity
-ModuleReg
-# storage
-db|lab.(7).cnf
-db|lab.(7).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_sensitive
-# source_file
-modulereg.v
-68d35d3be1bc64fab49778c8ad8bd16
-8
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-IGNORE_VERILOG_INITIAL_CONSTRUCTS
-OFF
-VERILOG_CONSTANT_LOOP_LIMIT
-5000
-VERILOG_NON_CONSTANT_LOOP_LIMIT
-250
-}
-# user_parameter {
-size
-5
-PARAMETER_SIGNED_DEC
-USR
-}
-# macro_sequence
-
-# end
-# entity
-RamReg
-# storage
-db|lab.(8).cnf
-db|lab.(8).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_sensitive
-# source_file
-ramreg.v
-ad32dbce5f437edb036553f55426912
-8
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-IGNORE_VERILOG_INITIAL_CONSTRUCTS
-OFF
-VERILOG_CONSTANT_LOOP_LIMIT
-5000
-VERILOG_NON_CONSTANT_LOOP_LIMIT
-250
-}
-# macro_sequence
-
-# end
-# entity
 addSub
 # storage
 db|lab.(9).cnf
@@ -1057,8 +801,274 @@ VERILOG_CONSTANT_LOOP_LIMIT
 VERILOG_NON_CONSTANT_LOOP_LIMIT
 250
 }
+# macro_sequence
+
+# end
+# entity
+lab_cu
+# storage
+db|lab.(1).cnf
+db|lab.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+lab_cu.v
+b2b6313fc429b0492fc0705d29fb943
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# user_parameter {
+S0
+0000
+PARAMETER_UNSIGNED_BIN
+DEF
+S1
+0001
+PARAMETER_UNSIGNED_BIN
+DEF
+S2
+0010
+PARAMETER_UNSIGNED_BIN
+DEF
+S3
+1000
+PARAMETER_UNSIGNED_BIN
+DEF
+S4
+1001
+PARAMETER_UNSIGNED_BIN
+DEF
+S5
+1010
+PARAMETER_UNSIGNED_BIN
+DEF
+S6
+1011
+PARAMETER_UNSIGNED_BIN
+DEF
+S7
+1100
+PARAMETER_UNSIGNED_BIN
+DEF
+S8
+1101
+PARAMETER_UNSIGNED_BIN
+DEF
+S9
+1110
+PARAMETER_UNSIGNED_BIN
+DEF
+S10
+1111
+PARAMETER_UNSIGNED_BIN
+DEF
+}
+# macro_sequence
+
+# end
+# entity
+lab_dp_pro
+# storage
+db|lab.(2).cnf
+db|lab.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+lab_dp_pro.v
+f52d927f02229f4ba92a4e685f76360
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
 # hierarchies {
 |
+}
+# macro_sequence
+
+# end
+# entity
+ModuleReg
+# storage
+db|lab.(3).cnf
+db|lab.(3).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+modulereg.v
+b19a6847366056d6161783bef76141d5
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# user_parameter {
+size
+8
+PARAMETER_SIGNED_DEC
+USR
+}
+# hierarchies {
+ModuleReg:IRregister
+ModuleReg:Aregister
+}
+# macro_sequence
+
+# end
+# entity
+ModuleReg
+# storage
+db|lab.(6).cnf
+db|lab.(6).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+modulereg.v
+b19a6847366056d6161783bef76141d5
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# user_parameter {
+size
+5
+PARAMETER_SIGNED_DEC
+USR
+}
+# hierarchies {
+ModuleReg:PCregister
+}
+# macro_sequence
+
+# end
+# entity
+RamReg
+# storage
+db|lab.(7).cnf
+db|lab.(7).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+ramreg.v
+aeed815d271bd0e43e4466bdcad7ac
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+RamReg:RAM
+}
+# macro_sequence
+
+# end
+# entity
+lab4B_p2_code
+# storage
+db|lab.(11).cnf
+db|lab.(11).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+lab4b_p2.v
+f8871f51f4e34d48837a72ed6cf2636d
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
 }
 # macro_sequence
 

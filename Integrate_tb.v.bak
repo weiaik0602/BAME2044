@@ -21,10 +21,10 @@ initial begin
 	#2 reset=1;
 	#2 Nin=9;
 	
-	#700 reset=0;
+	//#700 reset=0;
 	
 	
-	#1500 $finish;
+	#14000 $finish;
 	end
 	Integrate lmao(clock,reset,enter,Nin,halt,Nout,IR75out,StateNoout);
 	endmodule

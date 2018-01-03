@@ -26,7 +26,4 @@ module RamReg(
 		RAM[address]<=D;
 		end
 	end
-	//assign wAdderss=address;
-	//assign	RAM[wAdderss]=WE?D:RAM[wAdderss];
-	//assign	Q=WE?0:RAM[wAdderss];
 endmodule

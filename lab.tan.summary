@@ -5,9 +5,9 @@ Timing Analyzer Summary
 Type           : Worst-case tsu
 Slack          : N/A
 Required Time  : None
-Actual Time    : -0.013 ns
-From           : IR[2]
-To             : state.S10
+Actual Time    : 11.154 ns
+From           : Meminst
+To             : RamReg:RAM|Q[6]
 From Clock     : --
 To Clock       : clock
 Failed Paths   : 0
@@ -15,9 +15,9 @@ Failed Paths   : 0
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 17.133 ns
-From           : state.S2
-To             : Meminst
+Actual Time    : 13.923 ns
+From           : RamReg:RAM|Q[0]
+To             : da70[5]
 From Clock     : clock
 To Clock       : --
 Failed Paths   : 0
@@ -25,9 +25,9 @@ Failed Paths   : 0
 Type           : Worst-case tpd
 Slack          : N/A
 Required Time  : None
-Actual Time    : 10.838 ns
-From           : Apos
-To             : PCload
+Actual Time    : 16.846 ns
+From           : Sub
+To             : da70[5]
 From Clock     : --
 To Clock       : --
 Failed Paths   : 0
@@ -35,9 +35,9 @@ Failed Paths   : 0
 Type           : Worst-case th
 Slack          : N/A
 Required Time  : None
-Actual Time    : 1.773 ns
-From           : IR[1]
-To             : state.S8
+Actual Time    : -3.674 ns
+From           : Asel[0]
+To             : ModuleReg:Aregister|OUT[7]
 From Clock     : --
 To Clock       : clock
 Failed Paths   : 0
@@ -45,9 +45,9 @@ Failed Paths   : 0
 Type           : Clock Setup: 'clock'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 218.05 MHz ( period = 4.586 ns )
-From           : lab4B_p2_code:clkout|counter[21]
-To             : lab4B_p2_code:clkout|counter[17]
+Actual Time    : 128.12 MHz ( period = 7.805 ns )
+From           : ModuleReg:IRregister|OUT[4]
+To             : RamReg:RAM|Q[6]
 From Clock     : clock
 To Clock       : clock
 Failed Paths   : 0
