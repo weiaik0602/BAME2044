@@ -1,4 +1,4 @@
-module integrate_tb();
+module Integrate_tb();
 reg clock;
 reg reset,enter;
 reg [7:0]Nin;
@@ -13,7 +13,7 @@ initial begin
 	
 initial begin
 	clock=0;
-	forever #5 clock=~clock;
+	forever #10 clock=~clock;
 	end
 		
 	initial begin
@@ -27,5 +27,7 @@ initial begin
 	#14000 $finish;
 	end
 	Integrate lmao(clock,reset,enter,Nin,halt,Nout,IR75out,StateNoout);
+	always@(Nout)
+	 $display("Output value : %d, At time : %d",Nout,$time);
 	endmodule
 	

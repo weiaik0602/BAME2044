@@ -1,0 +1,187 @@
+m255
+K3
+13
+cModel Technology
+dC:\altera\91\modelsim_ase\examples
+vaddSub
+IT@AW9=Pd2_K?VhBFgCjkd1
+V8aSdiVOU[CZb2QkzZ@59B0
+Z0 dC:\Users\Student\Desktop\BAME2044
+Z1 w1515030219
+8C:/Users/Student/Desktop/BAME2044/addSub.v
+FC:/Users/Student/Desktop/BAME2044/addSub.v
+L0 1
+Z2 OV;L;6.5b;42
+r1
+31
+Z3 !s102 -nocovercells
+Z4 o-work work -nocovercells -O0
+nadd@sub
+!s100 YFjAG^PU;I;gkm=gbXWZ22
+!s85 0
+!s101 -O0
+vIntegrate
+IOjB]@^E7JM;I4o?mgcLBm0
+VUc2bU@QR0LRgek52WiWj61
+Z5 dC:\Users\Student\Desktop\BAME2044
+w1515031654
+8C:/Users/Student/Desktop/BAME2044/Integrate.v
+FC:/Users/Student/Desktop/BAME2044/Integrate.v
+L0 1
+R2
+r1
+31
+R3
+R4
+n@integrate
+!s100 RY[do4j8QUn`]noX[bAga0
+!s85 0
+!s101 -O0
+vIntegrate_tb
+I9Hd6hF<DTEMlO3lAgQhgP2
+V4jMTe<ScjCQQ3OKb9E9Dj2
+R5
+w1515031735
+8C:/Users/Student/Desktop/BAME2044/Integrate_tb.v
+FC:/Users/Student/Desktop/BAME2044/Integrate_tb.v
+L0 1
+R2
+r1
+31
+R3
+R4
+n@integrate_tb
+!s100 mYQ08@KY`^[j2TX@WaCX13
+!s85 0
+!s101 -O0
+vlab4B_p2
+IHP^_7of0b2`;03f[V@R`Q1
+VATe12:g^NkGUe_><S`<ik0
+R5
+w1515030836
+8C:/Users/Student/Desktop/BAME2044/lab4B_p2.v
+FC:/Users/Student/Desktop/BAME2044/lab4B_p2.v
+L0 1
+R2
+r1
+31
+R3
+R4
+nlab4@b_p2
+!s100 U?gUihTk0zbA@k5fEOObi3
+!s85 0
+!s101 -O0
+vlab_cu
+I[8j;c0EIT950;1i^M;KjI3
+VKMm1L5=6oBR1a_HYWjHgN1
+R5
+R1
+8C:/Users/Student/Desktop/BAME2044/lab_cu.v
+FC:/Users/Student/Desktop/BAME2044/lab_cu.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!s100 [bHjBnM:PV:g9[?WHDd^10
+!s85 0
+!s101 -O0
+vlab_cu_tb
+IlHUbhJLjd0iUjn5I4YNDK2
+VSIihW2[]ni1@Skk8ncL_a3
+R5
+R1
+8C:/Users/Student/Desktop/BAME2044/lab_cu_tb.v
+FC:/Users/Student/Desktop/BAME2044/lab_cu_tb.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!s100 @fa8aRMK7eNO3Y6XlLRG=1
+!s85 0
+!s101 -O0
+vlab_dp_pro
+I[2Zd<gXMC3XR4@S=K6DJO0
+VkB@d[T[i?h?<:Z^SFE^423
+R5
+R1
+8C:/Users/Student/Desktop/BAME2044/lab_dp_pro.v
+FC:/Users/Student/Desktop/BAME2044/lab_dp_pro.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!s100 k1^H41m^lAK6hebPagj`N3
+!s85 0
+!s101 -O0
+vlab_dp_tb
+IC=<T2AQ82HP]?1^dPVLdi1
+VgR9z?h78@F0=[[h`e^@5L2
+R5
+R1
+8C:/Users/Student/Desktop/BAME2044/lab_dp_tb.v
+FC:/Users/Student/Desktop/BAME2044/lab_dp_tb.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!s100 _=LkbYakMh0L?<:0bJaHa2
+!s85 0
+!s101 -O0
+vModuleReg
+I<`@FkY9oZ@?gCR?DmL>m60
+VF:BT<Y@C;zO?<GzETI0CI0
+R5
+R1
+8C:/Users/Student/Desktop/BAME2044/ModuleReg.v
+FC:/Users/Student/Desktop/BAME2044/ModuleReg.v
+L0 1
+R2
+r1
+31
+R3
+R4
+n@module@reg
+!s100 3P02U@F6MGWEGIfGeMYS50
+!s85 0
+!s101 -O0
+vRamReg
+IW@8YSbK[AQI;=ADgTz2V:3
+VhSHEmTU_<020cO>o_`azU3
+R5
+R1
+8C:/Users/Student/Desktop/BAME2044/RamReg.v
+FC:/Users/Student/Desktop/BAME2044/RamReg.v
+L0 1
+R2
+r1
+31
+R3
+R4
+n@ram@reg
+!s100 nB5HV^3b^Gm><lPh4hN5X1
+!s85 0
+!s101 -O0
+vtest_hardware
+!s100 WjA=54Gci000b^EOCNf1X1
+IzgmOl:9Xn[UEYbQk^ec7@2
+VS=`iCJ>I`PG<Ll99FD9ed0
+R5
+R1
+8C:/Users/Student/Desktop/BAME2044/test_hardware.v
+FC:/Users/Student/Desktop/BAME2044/test_hardware.v
+L0 1
+R2
+r1
+!s85 0
+31
+!s101 -O0
+R3
+R4

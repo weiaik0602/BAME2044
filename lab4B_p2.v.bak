@@ -1,4 +1,4 @@
-module lab4B_p2_code(
+module lab4B_p2(
 input [1:0]s,
 input clk,reset,
 	output reg Q

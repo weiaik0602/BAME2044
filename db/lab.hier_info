@@ -1,4 +1,179 @@
-|lab_dp_pro
+|test_hardware
+CLOCK_50 => CLOCK_50.IN1
+SW[0] => SW[0].IN1
+SW[1] => ~NO_FANOUT~
+SW[2] => ~NO_FANOUT~
+SW[3] => ~NO_FANOUT~
+SW[4] => ~NO_FANOUT~
+SW[5] => ~NO_FANOUT~
+SW[6] => ~NO_FANOUT~
+SW[7] => ~NO_FANOUT~
+SW[8] => ~NO_FANOUT~
+SW[9] => ~NO_FANOUT~
+KEY[0] => KEY[0].IN1
+LEDR[0] <= Integrate:lmao.port4
+LEDR[1] <= <GND>
+LEDR[2] <= <GND>
+LEDR[3] <= <GND>
+LEDR[4] <= <GND>
+LEDR[5] <= <GND>
+LEDR[6] <= <GND>
+LEDR[7] <= Integrate:lmao.port6
+LEDR[8] <= Integrate:lmao.port6
+LEDR[9] <= Integrate:lmao.port6
+LEDG[0] <= Integrate:lmao.port7
+LEDG[1] <= Integrate:lmao.port7
+LEDG[2] <= Integrate:lmao.port7
+LEDG[3] <= Integrate:lmao.port7
+LEDG[4] <= <GND>
+LEDG[5] <= <GND>
+LEDG[6] <= <GND>
+LEDG[7] <= <GND>
+HEX0[0] <= decoder:decode.port1
+HEX0[1] <= decoder:decode.port1
+HEX0[2] <= decoder:decode.port1
+HEX0[3] <= decoder:decode.port1
+HEX0[4] <= decoder:decode.port1
+HEX0[5] <= decoder:decode.port1
+HEX0[6] <= decoder:decode.port1
+
+
+|test_hardware|Integrate:lmao
+clock => clock.IN1
+reset => reset.IN2
+enter => enter.IN1
+Nin[0] => Nin[0].IN1
+Nin[1] => Nin[1].IN1
+Nin[2] => Nin[2].IN1
+Nin[3] => Nin[3].IN1
+Nin[4] => Nin[4].IN1
+Nin[5] => Nin[5].IN1
+Nin[6] => Nin[6].IN1
+Nin[7] => Nin[7].IN1
+halt <= lab_cu:CU.port14
+Nout[0] <= lab_dp_pro:DP.port14
+Nout[1] <= lab_dp_pro:DP.port14
+Nout[2] <= lab_dp_pro:DP.port14
+Nout[3] <= lab_dp_pro:DP.port14
+Nout[4] <= lab_dp_pro:DP.port14
+Nout[5] <= lab_dp_pro:DP.port14
+Nout[6] <= lab_dp_pro:DP.port14
+Nout[7] <= lab_dp_pro:DP.port14
+IR75out[0] <= IR75[0].DB_MAX_OUTPUT_PORT_TYPE
+IR75out[1] <= IR75[1].DB_MAX_OUTPUT_PORT_TYPE
+IR75out[2] <= IR75[2].DB_MAX_OUTPUT_PORT_TYPE
+StateNoout[0] <= lab_cu:CU.port15
+StateNoout[1] <= lab_cu:CU.port15
+StateNoout[2] <= lab_cu:CU.port15
+StateNoout[3] <= lab_cu:CU.port15
+
+
+|test_hardware|Integrate:lmao|lab4B_p2:SC
+s[0] => Decoder0.IN1
+s[0] => LessThan0.IN48
+s[0] => LessThan0.IN54
+s[0] => LessThan0.IN57
+s[1] => Decoder0.IN0
+s[1] => LessThan0.IN52
+s[1] => LessThan0.IN53
+s[1] => LessThan0.IN55
+s[1] => LessThan0.IN62
+clk => counter[0].CLK
+clk => counter[1].CLK
+clk => counter[2].CLK
+clk => counter[3].CLK
+clk => counter[4].CLK
+clk => counter[5].CLK
+clk => counter[6].CLK
+clk => counter[7].CLK
+clk => counter[8].CLK
+clk => counter[9].CLK
+clk => counter[10].CLK
+clk => counter[11].CLK
+clk => counter[12].CLK
+clk => counter[13].CLK
+clk => counter[14].CLK
+clk => counter[15].CLK
+clk => counter[16].CLK
+clk => counter[17].CLK
+clk => counter[18].CLK
+clk => counter[19].CLK
+clk => counter[20].CLK
+clk => counter[21].CLK
+clk => counter[22].CLK
+clk => counter[23].CLK
+clk => counter[24].CLK
+clk => counter[25].CLK
+clk => counter[26].CLK
+clk => counter[27].CLK
+clk => counter[28].CLK
+clk => counter[29].CLK
+clk => counter[30].CLK
+clk => counter[31].CLK
+clk => Q~reg0.CLK
+reset => counter[0].ACLR
+reset => counter[1].ACLR
+reset => counter[2].ACLR
+reset => counter[3].ACLR
+reset => counter[4].ACLR
+reset => counter[5].ACLR
+reset => counter[6].ACLR
+reset => counter[7].ACLR
+reset => counter[8].ACLR
+reset => counter[9].ACLR
+reset => counter[10].ACLR
+reset => counter[11].ACLR
+reset => counter[12].ACLR
+reset => counter[13].ACLR
+reset => counter[14].ACLR
+reset => counter[15].ACLR
+reset => counter[16].ACLR
+reset => counter[17].ACLR
+reset => counter[18].ACLR
+reset => counter[19].ACLR
+reset => counter[20].ACLR
+reset => counter[21].ACLR
+reset => counter[22].ACLR
+reset => counter[23].ACLR
+reset => counter[24].ACLR
+reset => counter[25].ACLR
+reset => counter[26].ACLR
+reset => counter[27].ACLR
+reset => counter[28].ACLR
+reset => counter[29].ACLR
+reset => counter[30].ACLR
+reset => counter[31].ACLR
+reset => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|test_hardware|Integrate:lmao|lab_cu:CU
+clock => state~1.DATAIN
+reset => state~3.DATAIN
+enter => Selector1.IN4
+enter => Selector2.IN2
+Aeq0 => Selector0.IN3
+Apos => Selector0.IN4
+IR[0] => Decoder0.IN2
+IR[1] => Decoder0.IN1
+IR[2] => Decoder0.IN0
+IRload <= IRload.DB_MAX_OUTPUT_PORT_TYPE
+JMPmux <= JMPmux.DB_MAX_OUTPUT_PORT_TYPE
+PCload <= Selector0.DB_MAX_OUTPUT_PORT_TYPE
+Meminst <= Meminst.DB_MAX_OUTPUT_PORT_TYPE
+MemWr <= MemWr.DB_MAX_OUTPUT_PORT_TYPE
+Asel[0] <= Asel[0].DB_MAX_OUTPUT_PORT_TYPE
+Asel[1] <= Asel[1].DB_MAX_OUTPUT_PORT_TYPE
+Aload <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+Sub <= Sub.DB_MAX_OUTPUT_PORT_TYPE
+Halt <= Halt.DB_MAX_OUTPUT_PORT_TYPE
+StateNo[0] <= WideOr9.DB_MAX_OUTPUT_PORT_TYPE
+StateNo[1] <= WideOr8.DB_MAX_OUTPUT_PORT_TYPE
+StateNo[2] <= WideOr7.DB_MAX_OUTPUT_PORT_TYPE
+StateNo[3] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|test_hardware|Integrate:lmao|lab_dp_pro:DP
 clock => clock.IN4
 reset => reset.IN3
 Input[0] => Mux7.IN1
@@ -101,7 +276,7 @@ a70[3] <= A70[3].DB_MAX_OUTPUT_PORT_TYPE
 a70[4] <= A70[4].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|lab_dp_pro|ModuleReg:IRregister
+|test_hardware|Integrate:lmao|lab_dp_pro:DP|ModuleReg:IRregister
 clock => OUT[0]~reg0.CLK
 clock => OUT[1]~reg0.CLK
 clock => OUT[2]~reg0.CLK
@@ -144,7 +319,7 @@ OUT[6] <= OUT[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 OUT[7] <= OUT[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|lab_dp_pro|ModuleReg:PCregister
+|test_hardware|Integrate:lmao|lab_dp_pro:DP|ModuleReg:PCregister
 clock => OUT[0]~reg0.CLK
 clock => OUT[1]~reg0.CLK
 clock => OUT[2]~reg0.CLK
@@ -172,7 +347,7 @@ OUT[3] <= OUT[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 OUT[4] <= OUT[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|lab_dp_pro|ModuleReg:Aregister
+|test_hardware|Integrate:lmao|lab_dp_pro:DP|ModuleReg:Aregister
 clock => OUT[0]~reg0.CLK
 clock => OUT[1]~reg0.CLK
 clock => OUT[2]~reg0.CLK
@@ -215,7 +390,7 @@ OUT[6] <= OUT[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 OUT[7] <= OUT[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|lab_dp_pro|RamReg:RAM
+|test_hardware|Integrate:lmao|lab_dp_pro:DP|RamReg:RAM
 clock => Q[0]~reg0.CLK
 clock => Q[1]~reg0.CLK
 clock => Q[2]~reg0.CLK
@@ -909,5 +1084,19 @@ Q[4] <= Q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[5] <= Q[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[6] <= Q[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[7] <= Q[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|test_hardware|decoder:decode
+in[0] => Decoder0.IN3
+in[1] => Decoder0.IN2
+in[2] => Decoder0.IN1
+in[3] => Decoder0.IN0
+out[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 

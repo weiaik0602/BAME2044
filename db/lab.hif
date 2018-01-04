@@ -20,39 +20,6 @@ VHSM_ON
 -- Start VHDL Libraries --
 -- End VHDL Libraries --
 # entity
-test_hardware
-# storage
-db|lab.(0).cnf
-db|lab.(0).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_sensitive
-# source_file
-test_hardware.v
-17b59e342bef1183f26d82ddf88654d
-8
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-IGNORE_VERILOG_INITIAL_CONSTRUCTS
-OFF
-VERILOG_CONSTANT_LOOP_LIMIT
-5000
-VERILOG_NON_CONSTANT_LOOP_LIMIT
-250
-}
-# macro_sequence
-
-# end
-# entity
 altsyncram
 # storage
 db|lab.(4).cnf
@@ -880,6 +847,9 @@ S10
 PARAMETER_UNSIGNED_BIN
 DEF
 }
+# hierarchies {
+Integrate:lmao|lab_cu:CU
+}
 # macro_sequence
 
 # end
@@ -914,7 +884,7 @@ VERILOG_NON_CONSTANT_LOOP_LIMIT
 250
 }
 # hierarchies {
-|
+Integrate:lmao|lab_dp_pro:DP
 }
 # macro_sequence
 
@@ -956,8 +926,8 @@ PARAMETER_SIGNED_DEC
 USR
 }
 # hierarchies {
-ModuleReg:IRregister
-ModuleReg:Aregister
+Integrate:lmao|lab_dp_pro:DP|ModuleReg:IRregister
+Integrate:lmao|lab_dp_pro:DP|ModuleReg:Aregister
 }
 # macro_sequence
 
@@ -999,7 +969,7 @@ PARAMETER_SIGNED_DEC
 USR
 }
 # hierarchies {
-ModuleReg:PCregister
+Integrate:lmao|lab_dp_pro:DP|ModuleReg:PCregister
 }
 # macro_sequence
 
@@ -1007,8 +977,8 @@ ModuleReg:PCregister
 # entity
 RamReg
 # storage
-db|lab.(7).cnf
-db|lab.(7).cnf
+db|lab.(0).cnf
+db|lab.(0).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
@@ -1016,7 +986,7 @@ ON
 # case_sensitive
 # source_file
 ramreg.v
-aeed815d271bd0e43e4466bdcad7ac
+aa1382a46243c1beadfd75bd9bff543
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -1035,24 +1005,24 @@ VERILOG_NON_CONSTANT_LOOP_LIMIT
 250
 }
 # hierarchies {
-RamReg:RAM
+Integrate:lmao|lab_dp_pro:DP|RamReg:RAM
 }
 # macro_sequence
 
 # end
 # entity
-lab4B_p2_code
+Integrate
 # storage
-db|lab.(11).cnf
-db|lab.(11).cnf
+db|lab.(8).cnf
+db|lab.(8).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
 }
 # case_sensitive
 # source_file
-lab4b_p2.v
-f8871f51f4e34d48837a72ed6cf2636d
+integrate.v
+3d3a17b3369d38e098a61e1aee74a68
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -1069,6 +1039,117 @@ VERILOG_CONSTANT_LOOP_LIMIT
 5000
 VERILOG_NON_CONSTANT_LOOP_LIMIT
 250
+}
+# hierarchies {
+Integrate:lmao
+}
+# macro_sequence
+
+# end
+# entity
+decoder
+# storage
+db|lab.(12).cnf
+db|lab.(12).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+decoder.v
+9e2f21f5498d938a8327957b623ef13
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+decoder:decode
+}
+# macro_sequence
+
+# end
+# entity
+lab4B_p2
+# storage
+db|lab.(11).cnf
+db|lab.(11).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+lab4b_p2.v
+7d946b6c7dd8acff68d36b6bed743e46
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+Integrate:lmao|lab4B_p2:SC
+}
+# macro_sequence
+
+# end
+# entity
+test_hardware
+# storage
+db|lab.(7).cnf
+db|lab.(7).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+test_hardware.v
+fe46889eafdf28e9e265ec5652ff40
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+|
 }
 # macro_sequence
 

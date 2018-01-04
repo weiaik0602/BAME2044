@@ -1,4 +1,4 @@
-module lab4B_p2_code(
+module lab4B_p2(
 input [1:0]s,
 input clk,reset,
 	output reg Q
@@ -11,7 +11,7 @@ integer temp;
 always @(s)begin
 	case({s})
 			2'b00:temp<=50000000;
-			2'b01:temp<=4;            //ori is 25000000
+			2'b01:temp<=10000000;            //ori is 25000000
 			2'b10:temp<=110000000;
 			2'b11:temp<=5000000;
 	endcase

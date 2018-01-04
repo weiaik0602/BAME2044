@@ -1,5 +1,5 @@
 Analysis & Synthesis report for lab
-Wed Jan 03 23:55:47 2018
+Thu Jan 04 11:19:31 2018
 Quartus II Version 9.1 Build 222 10/21/2009 SJ Web Edition
 
 
@@ -13,13 +13,19 @@ Quartus II Version 9.1 Build 222 10/21/2009 SJ Web Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Multiplexer Restructuring Statistics (Restructuring Performed)
- 10. Parameter Settings for User Entity Instance: ModuleReg:IRregister
- 11. Parameter Settings for User Entity Instance: ModuleReg:PCregister
- 12. Parameter Settings for User Entity Instance: ModuleReg:Aregister
- 13. Analysis & Synthesis Messages
- 14. Analysis & Synthesis Suppressed Messages
+  8. State Machine - |test_hardware|Integrate:lmao|lab_cu:CU|state
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: Integrate:lmao|lab_cu:CU
+ 13. Parameter Settings for User Entity Instance: Integrate:lmao|lab_dp_pro:DP|ModuleReg:IRregister
+ 14. Parameter Settings for User Entity Instance: Integrate:lmao|lab_dp_pro:DP|ModuleReg:PCregister
+ 15. Parameter Settings for User Entity Instance: Integrate:lmao|lab_dp_pro:DP|ModuleReg:Aregister
+ 16. Port Connectivity Checks: "Integrate:lmao|lab_dp_pro:DP"
+ 17. Port Connectivity Checks: "Integrate:lmao|lab4B_p2:SC"
+ 18. Port Connectivity Checks: "Integrate:lmao"
+ 19. Analysis & Synthesis Messages
+ 20. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -45,16 +51,16 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                 ;
 +------------------------------------+-----------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Jan 03 23:55:47 2018   ;
+; Analysis & Synthesis Status        ; Successful - Thu Jan 04 11:19:31 2018   ;
 ; Quartus II Version                 ; 9.1 Build 222 10/21/2009 SJ Web Edition ;
 ; Revision Name                      ; lab                                     ;
-; Top-level Entity Name              ; lab_dp_pro                              ;
+; Top-level Entity Name              ; test_hardware                           ;
 ; Family                             ; Cyclone II                              ;
-; Total logic elements               ; 460                                     ;
-;     Total combinational functions  ; 244                                     ;
-;     Dedicated logic registers      ; 237                                     ;
-; Total registers                    ; 237                                     ;
-; Total pins                         ; 71                                      ;
+; Total logic elements               ; 521                                     ;
+;     Total combinational functions  ; 304                                     ;
+;     Dedicated logic registers      ; 281                                     ;
+; Total registers                    ; 281                                     ;
+; Total pins                         ; 37                                      ;
 ; Total virtual pins                 ; 0                                       ;
 ; Total memory bits                  ; 0                                       ;
 ; Embedded Multiplier 9-bit elements ; 0                                       ;
@@ -68,7 +74,7 @@ applicable agreement for further details.
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP2C20F484C7       ;                    ;
-; Top-level entity name                                                      ; lab_dp_pro         ; lab                ;
+; Top-level entity name                                                      ; test_hardware      ; lab                ;
 ; Family name                                                                ; Cyclone II         ; Stratix II         ;
 ; Use Generated Physical Constraints File                                    ; Off                ;                    ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
@@ -147,63 +153,106 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 ; Processors                 ; Number ;
 +----------------------------+--------+
-; Number detected on machine ; 2      ;
+; Number detected on machine ; 4      ;
 ; Maximum allowed            ; 1      ;
 +----------------------------+--------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                     ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                 ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------+
-; lab_dp_pro.v                     ; yes             ; User Verilog HDL File  ; C:/Users/ng_we/Desktop/BAME2044/lab_dp_pro.v ;
-; ModuleReg.v                      ; yes             ; User Verilog HDL File  ; C:/Users/ng_we/Desktop/BAME2044/ModuleReg.v  ;
-; RamReg.v                         ; yes             ; User Verilog HDL File  ; C:/Users/ng_we/Desktop/BAME2044/RamReg.v     ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                          ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                      ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------+
+; lab4B_p2.v                       ; yes             ; User Verilog HDL File  ; C:/Users/Student/Desktop/BAME2044/lab4B_p2.v      ;
+; test_hardware.v                  ; yes             ; User Verilog HDL File  ; C:/Users/Student/Desktop/BAME2044/test_hardware.v ;
+; lab_cu.v                         ; yes             ; User Verilog HDL File  ; C:/Users/Student/Desktop/BAME2044/lab_cu.v        ;
+; lab_dp_pro.v                     ; yes             ; User Verilog HDL File  ; C:/Users/Student/Desktop/BAME2044/lab_dp_pro.v    ;
+; ModuleReg.v                      ; yes             ; User Verilog HDL File  ; C:/Users/Student/Desktop/BAME2044/ModuleReg.v     ;
+; RamReg.v                         ; yes             ; User Verilog HDL File  ; C:/Users/Student/Desktop/BAME2044/RamReg.v        ;
+; Integrate.v                      ; yes             ; User Verilog HDL File  ; C:/Users/Student/Desktop/BAME2044/Integrate.v     ;
+; decoder.v                        ; yes             ; User Verilog HDL File  ; C:/Users/Student/Desktop/BAME2044/decoder.v       ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------+
 
 
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-; Estimated Total logic elements              ; 460   ;
-;                                             ;       ;
-; Total combinational functions               ; 244   ;
-; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 188   ;
-;     -- 3 input functions                    ; 40    ;
-;     -- <=2 input functions                  ; 16    ;
-;                                             ;       ;
-; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 232   ;
-;     -- arithmetic mode                      ; 12    ;
-;                                             ;       ;
-; Total registers                             ; 237   ;
-;     -- Dedicated logic registers            ; 237   ;
-;     -- I/O registers                        ; 0     ;
-;                                             ;       ;
-; I/O pins                                    ; 71    ;
-; Maximum fan-out node                        ; clock ;
-; Maximum fan-out                             ; 237   ;
-; Total fan-out                               ; 1697  ;
-; Average fan-out                             ; 3.07  ;
-+---------------------------------------------+-------+
++----------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                ;
++---------------------------------------------+------------------------------+
+; Resource                                    ; Usage                        ;
++---------------------------------------------+------------------------------+
+; Estimated Total logic elements              ; 521                          ;
+;                                             ;                              ;
+; Total combinational functions               ; 304                          ;
+; Logic element usage by number of LUT inputs ;                              ;
+;     -- 4 input functions                    ; 199                          ;
+;     -- 3 input functions                    ; 33                           ;
+;     -- <=2 input functions                  ; 72                           ;
+;                                             ;                              ;
+; Logic elements by mode                      ;                              ;
+;     -- normal mode                          ; 261                          ;
+;     -- arithmetic mode                      ; 43                           ;
+;                                             ;                              ;
+; Total registers                             ; 281                          ;
+;     -- Dedicated logic registers            ; 281                          ;
+;     -- I/O registers                        ; 0                            ;
+;                                             ;                              ;
+; I/O pins                                    ; 37                           ;
+; Maximum fan-out node                        ; Integrate:lmao|lab4B_p2:SC|Q ;
+; Maximum fan-out                             ; 249                          ;
+; Total fan-out                               ; 1957                         ;
+; Average fan-out                             ; 3.15                         ;
++---------------------------------------------+------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                      ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name              ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------+--------------+
-; |lab_dp_pro                ; 244 (41)          ; 237 (0)      ; 0           ; 0            ; 0       ; 0         ; 71   ; 0            ; |lab_dp_pro                      ; work         ;
-;    |ModuleReg:Aregister|   ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab_dp_pro|ModuleReg:Aregister  ;              ;
-;    |ModuleReg:IRregister|  ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab_dp_pro|ModuleReg:IRregister ;              ;
-;    |ModuleReg:PCregister|  ; 5 (5)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab_dp_pro|ModuleReg:PCregister ;              ;
-;    |RamReg:RAM|            ; 198 (198)         ; 216 (216)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab_dp_pro|RamReg:RAM           ;              ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                           ;
++---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node      ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                              ; Library Name ;
++---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------+--------------+
+; |test_hardware                  ; 304 (2)           ; 281 (0)      ; 0           ; 0            ; 0       ; 0         ; 37   ; 0            ; |test_hardware                                                   ; work         ;
+;    |Integrate:lmao|             ; 295 (0)           ; 281 (0)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |test_hardware|Integrate:lmao                                    ;              ;
+;       |lab4B_p2:SC|             ; 44 (44)           ; 33 (33)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |test_hardware|Integrate:lmao|lab4B_p2:SC                        ;              ;
+;       |lab_cu:CU|               ; 21 (21)           ; 11 (11)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |test_hardware|Integrate:lmao|lab_cu:CU                          ;              ;
+;       |lab_dp_pro:DP|           ; 230 (30)          ; 237 (0)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |test_hardware|Integrate:lmao|lab_dp_pro:DP                      ;              ;
+;          |ModuleReg:Aregister|  ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |test_hardware|Integrate:lmao|lab_dp_pro:DP|ModuleReg:Aregister  ;              ;
+;          |ModuleReg:IRregister| ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |test_hardware|Integrate:lmao|lab_dp_pro:DP|ModuleReg:IRregister ;              ;
+;          |ModuleReg:PCregister| ; 5 (5)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |test_hardware|Integrate:lmao|lab_dp_pro:DP|ModuleReg:PCregister ;              ;
+;          |RamReg:RAM|           ; 195 (195)         ; 216 (216)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |test_hardware|Integrate:lmao|lab_dp_pro:DP|RamReg:RAM           ;              ;
+;    |decoder:decode|             ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |test_hardware|decoder:decode                                    ;              ;
++---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |test_hardware|Integrate:lmao|lab_cu:CU|state                                                                       ;
++-----------+-----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+
+; Name      ; state.S10 ; state.S9 ; state.S8 ; state.S7 ; state.S6 ; state.S5 ; state.S4 ; state.S3 ; state.S2 ; state.S1 ; state.S0 ;
++-----------+-----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+
+; state.S0  ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ;
+; state.S1  ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ; 1        ;
+; state.S2  ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ; 0        ; 1        ;
+; state.S3  ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ; 0        ; 0        ; 1        ;
+; state.S4  ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ; 0        ; 0        ; 0        ; 1        ;
+; state.S5  ; 0         ; 0        ; 0        ; 0        ; 0        ; 1        ; 0        ; 0        ; 0        ; 0        ; 1        ;
+; state.S6  ; 0         ; 0        ; 0        ; 0        ; 1        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ;
+; state.S7  ; 0         ; 0        ; 0        ; 1        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ;
+; state.S8  ; 0         ; 0        ; 1        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ;
+; state.S9  ; 0         ; 1        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ;
+; state.S10 ; 1         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ;
++-----------+-----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+
+
+
++------------------------------------------------------------+
+; Registers Removed During Synthesis                         ;
++---------------------------------------+--------------------+
+; Register name                         ; Reason for Removal ;
++---------------------------------------+--------------------+
+; Integrate:lmao|lab_cu:CU|state~4      ; Lost fanout        ;
+; Integrate:lmao|lab_cu:CU|state~5      ; Lost fanout        ;
+; Integrate:lmao|lab_cu:CU|state~6      ; Lost fanout        ;
+; Integrate:lmao|lab_cu:CU|state~7      ; Lost fanout        ;
+; Total Number of Removed Registers = 4 ;                    ;
++---------------------------------------+--------------------+
 
 
 +------------------------------------------------------+
@@ -211,54 +260,110 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 237   ;
-; Number of registers using Synchronous Clear  ; 0     ;
+; Total registers                              ; 281   ;
+; Number of registers using Synchronous Clear  ; 32    ;
 ; Number of registers using Synchronous Load   ; 5     ;
-; Number of registers using Asynchronous Clear ; 21    ;
+; Number of registers using Asynchronous Clear ; 65    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 237   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                            ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output  ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
-; 32:1               ; 8 bits    ; 168 LEs       ; 144 LEs              ; 24 LEs                 ; Yes        ; |lab_dp_pro|RamReg:RAM|Q[7] ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |lab_dp_pro|Mux4            ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------+
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |test_hardware|Integrate:lmao|lab_dp_pro:DP|ModuleReg:Aregister|OUT[0] ;
+; 32:1               ; 8 bits    ; 168 LEs       ; 144 LEs              ; 24 LEs                 ; Yes        ; |test_hardware|Integrate:lmao|lab_dp_pro:DP|RamReg:RAM|Q[5]            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ModuleReg:IRregister ;
-+----------------+-------+------------------------------------------+
-; Parameter Name ; Value ; Type                                     ;
-+----------------+-------+------------------------------------------+
-; size           ; 8     ; Signed Integer                           ;
-+----------------+-------+------------------------------------------+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Integrate:lmao|lab_cu:CU ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; S0             ; 0000  ; Unsigned Binary                              ;
+; S1             ; 0001  ; Unsigned Binary                              ;
+; S2             ; 0010  ; Unsigned Binary                              ;
+; S3             ; 1000  ; Unsigned Binary                              ;
+; S4             ; 1001  ; Unsigned Binary                              ;
+; S5             ; 1010  ; Unsigned Binary                              ;
+; S6             ; 1011  ; Unsigned Binary                              ;
+; S7             ; 1100  ; Unsigned Binary                              ;
+; S8             ; 1101  ; Unsigned Binary                              ;
+; S9             ; 1110  ; Unsigned Binary                              ;
+; S10            ; 1111  ; Unsigned Binary                              ;
++----------------+-------+----------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ModuleReg:PCregister ;
-+----------------+-------+------------------------------------------+
-; Parameter Name ; Value ; Type                                     ;
-+----------------+-------+------------------------------------------+
-; size           ; 5     ; Signed Integer                           ;
-+----------------+-------+------------------------------------------+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Integrate:lmao|lab_dp_pro:DP|ModuleReg:IRregister ;
++----------------+-------+-----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                  ;
++----------------+-------+-----------------------------------------------------------------------+
+; size           ; 8     ; Signed Integer                                                        ;
++----------------+-------+-----------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ModuleReg:Aregister ;
-+----------------+-------+-----------------------------------------+
-; Parameter Name ; Value ; Type                                    ;
-+----------------+-------+-----------------------------------------+
-; size           ; 8     ; Signed Integer                          ;
-+----------------+-------+-----------------------------------------+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Integrate:lmao|lab_dp_pro:DP|ModuleReg:PCregister ;
++----------------+-------+-----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                  ;
++----------------+-------+-----------------------------------------------------------------------+
+; size           ; 5     ; Signed Integer                                                        ;
++----------------+-------+-----------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Integrate:lmao|lab_dp_pro:DP|ModuleReg:Aregister ;
++----------------+-------+----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                 ;
++----------------+-------+----------------------------------------------------------------------+
+; size           ; 8     ; Signed Integer                                                       ;
++----------------+-------+----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Integrate:lmao|lab_dp_pro:DP"                                                          ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; meminst ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; da70    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; q70     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; ir70    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; pc40    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; a70     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------+
+; Port Connectivity Checks: "Integrate:lmao|lab4B_p2:SC" ;
++------+-------+----------+------------------------------+
+; Port ; Type  ; Severity ; Details                      ;
++------+-------+----------+------------------------------+
+; s[1] ; Input ; Info     ; Stuck at GND                 ;
+; s[0] ; Input ; Info     ; Stuck at VCC                 ;
++------+-------+----------+------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Integrate:lmao"                                                                                                                                                                          ;
++------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                                                                                                                            ;
++------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Nin        ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (8 bits) it drives.  The 24 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; Nin[1..0]  ; Input  ; Info     ; Stuck at VCC                                                                                                                                                                       ;
+; Nin[7..2]  ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; Nout[7..4] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                                ;
++------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-------------------------------+
@@ -267,10 +372,10 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.1 Build 222 10/21/2009 SJ Web Edition
-    Info: Processing started: Wed Jan 03 23:55:41 2018
+    Info: Processing started: Thu Jan 04 11:19:27 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lab -c lab
 Info: Found 1 design units, including 1 entities, in source file lab4b_p2.v
-    Info: Found entity 1: lab4B_p2_code
+    Info: Found entity 1: lab4B_p2
 Info: Found 1 design units, including 1 entities, in source file test_hardware.v
     Info: Found entity 1: test_hardware
 Info: Found 1 design units, including 1 entities, in source file lab_cu.v
@@ -291,29 +396,67 @@ Info: Found 1 design units, including 1 entities, in source file integrate.v
     Info: Found entity 1: Integrate
 Info: Found 1 design units, including 1 entities, in source file integrate_tb.v
     Info: Found entity 1: Integrate_tb
-Warning (10236): Verilog HDL Implicit Net warning at test_hardware.v(9): created implicit net for "reset"
-Info: Elaborating entity "lab_dp_pro" for the top level hierarchy
+Info: Found 1 design units, including 1 entities, in source file decoder.v
+    Info: Found entity 1: decoder
+Info: Elaborating entity "test_hardware" for the top level hierarchy
+Warning (10034): Output port "LEDR[6..1]" at test_hardware.v(5) has no driver
+Warning (10034): Output port "LEDG[7..4]" at test_hardware.v(6) has no driver
+Info: Elaborating entity "Integrate" for hierarchy "Integrate:lmao"
+Info: Elaborating entity "lab4B_p2" for hierarchy "Integrate:lmao|lab4B_p2:SC"
+Info: Elaborating entity "lab_cu" for hierarchy "Integrate:lmao|lab_cu:CU"
+Warning (10235): Verilog HDL Always Construct warning at lab_cu.v(37): variable "IR" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at lab_cu.v(72): variable "Aeq0" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at lab_cu.v(79): variable "Apos" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Info: Elaborating entity "lab_dp_pro" for hierarchy "Integrate:lmao|lab_dp_pro:DP"
 Warning (10230): Verilog HDL assignment warning at lab_dp_pro.v(43): truncated value with size 32 to match size of target (5)
 Warning (10230): Verilog HDL assignment warning at lab_dp_pro.v(62): truncated value with size 8 to match size of target (1)
 Warning (10230): Verilog HDL assignment warning at lab_dp_pro.v(70): truncated value with size 8 to match size of target (5)
-Info: Elaborating entity "ModuleReg" for hierarchy "ModuleReg:IRregister"
-Info: Elaborating entity "ModuleReg" for hierarchy "ModuleReg:PCregister"
-Info: Elaborating entity "RamReg" for hierarchy "RamReg:RAM"
-Info: Generated suppressed messages file C:/Users/ng_we/Desktop/BAME2044/lab.map.smsg
-Info: Implemented 539 device resources after synthesis - the final resource count might be different
-    Info: Implemented 19 input pins
-    Info: Implemented 52 output pins
-    Info: Implemented 468 logic cells
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 275 megabytes
-    Info: Processing ended: Wed Jan 03 23:55:47 2018
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:06
+Info: Elaborating entity "ModuleReg" for hierarchy "Integrate:lmao|lab_dp_pro:DP|ModuleReg:IRregister"
+Info: Elaborating entity "ModuleReg" for hierarchy "Integrate:lmao|lab_dp_pro:DP|ModuleReg:PCregister"
+Info: Elaborating entity "RamReg" for hierarchy "Integrate:lmao|lab_dp_pro:DP|RamReg:RAM"
+Info: Elaborating entity "decoder" for hierarchy "decoder:decode"
+Warning: 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning: Output pins are stuck at VCC or GND
+    Warning (13410): Pin "LEDR[1]" is stuck at GND
+    Warning (13410): Pin "LEDR[2]" is stuck at GND
+    Warning (13410): Pin "LEDR[3]" is stuck at GND
+    Warning (13410): Pin "LEDR[4]" is stuck at GND
+    Warning (13410): Pin "LEDR[5]" is stuck at GND
+    Warning (13410): Pin "LEDR[6]" is stuck at GND
+    Warning (13410): Pin "LEDG[4]" is stuck at GND
+    Warning (13410): Pin "LEDG[5]" is stuck at GND
+    Warning (13410): Pin "LEDG[6]" is stuck at GND
+    Warning (13410): Pin "LEDG[7]" is stuck at GND
+Info: 4 registers lost all their fanouts during netlist optimizations. The first 4 are displayed below.
+    Info: Register "Integrate:lmao|lab_cu:CU|state~4" lost all its fanouts during netlist optimizations.
+    Info: Register "Integrate:lmao|lab_cu:CU|state~5" lost all its fanouts during netlist optimizations.
+    Info: Register "Integrate:lmao|lab_cu:CU|state~6" lost all its fanouts during netlist optimizations.
+    Info: Register "Integrate:lmao|lab_cu:CU|state~7" lost all its fanouts during netlist optimizations.
+Info: Generated suppressed messages file C:/Users/Student/Desktop/BAME2044/lab.map.smsg
+Warning: Design contains 9 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "SW[1]"
+    Warning (15610): No output dependent on input pin "SW[2]"
+    Warning (15610): No output dependent on input pin "SW[3]"
+    Warning (15610): No output dependent on input pin "SW[4]"
+    Warning (15610): No output dependent on input pin "SW[5]"
+    Warning (15610): No output dependent on input pin "SW[6]"
+    Warning (15610): No output dependent on input pin "SW[7]"
+    Warning (15610): No output dependent on input pin "SW[8]"
+    Warning (15610): No output dependent on input pin "SW[9]"
+Info: Implemented 558 device resources after synthesis - the final resource count might be different
+    Info: Implemented 12 input pins
+    Info: Implemented 25 output pins
+    Info: Implemented 521 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 31 warnings
+    Info: Peak virtual memory: 200 megabytes
+    Info: Processing ended: Thu Jan 04 11:19:31 2018
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:04
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/Users/ng_we/Desktop/BAME2044/lab.map.smsg.
+The suppressed messages can be found in C:/Users/Student/Desktop/BAME2044/lab.map.smsg.
 
 

@@ -27,5 +27,7 @@ initial begin
 	#14000 $finish;
 	end
 	Integrate lmao(clock,reset,enter,Nin,halt,Nout,IR75out,StateNoout);
+	always@(Nout)
+	 $display("Output value : %d, At time : %d",Nout,$time);
 	endmodule
 	
